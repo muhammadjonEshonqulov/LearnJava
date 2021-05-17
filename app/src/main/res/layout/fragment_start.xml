@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:gravity="center|top"
     android:orientation="vertical"
     android:paddingTop="100dp">
@@ -12,7 +13,7 @@
         android:layout_margin="16dp"
         android:gravity="center"
         android:text="Java dasturlashni o'rganish"
-        android:textColor="@color/black"
+        android:textColor="@color/cl_color_primary"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -21,7 +22,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Dasturlash haqida" />
+        android:background="@drawable/back_btn"
+        android:text="Dasturlash haqida"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/authors"
@@ -29,13 +32,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Mualliflar" />
+        android:background="@drawable/back_btn"
+        android:text="Java dasturlash tili tarixi"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Kirish" />
+        android:background="@drawable/back_btn"
+        android:text="Kirish"
+        android:textColor="@color/white" />
 
 </LinearLayout>
