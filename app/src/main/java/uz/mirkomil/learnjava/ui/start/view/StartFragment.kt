@@ -1,7 +1,7 @@
 package uz.mirkomil.learnjava.ui.start.view
 
 import android.view.View
-import uz.intalim.ui.base.BaseFragment
+import uz.mirkomil.learnjava.base.BaseFragment
 import uz.mirkomil.learnjava.R
 import uz.mirkomil.learnjava.databinding.FragmentStartBinding
 import uz.mirkomil.learnjava.ui.author.view.AuthorFragment

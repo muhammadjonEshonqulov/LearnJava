@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/action_bar_help"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/cl_color_primary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_btn_help"
+            app:tint="@color/white"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:clipToPadding="true"
+            android:padding="7dp"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/title_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="7dp"
+            android:padding="7dp"
+            android:text="Beginner darslar"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/beginner_lessons"

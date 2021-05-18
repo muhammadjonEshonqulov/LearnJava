@@ -16,7 +16,7 @@
     <color name="place_holder_color">#dddddd</color>
 
     <!--Classic theme-->
-    <color name="cl_color_primary">#005ED0</color>
+    <color name="cl_color_primary">#0073FF</color>
 
     <color name="cl_color_primary_test_pos">#80005ED0</color>
     <color name="cl_color_primary_dark">#034FAE</color>

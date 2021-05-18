@@ -1,10 +1,8 @@
-package uz.intalim.ui.base
+package uz.mirkomil.learnjava.base
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.ActivityInfo
-import android.content.res.Configuration
-import android.os.Build
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
@@ -14,12 +12,10 @@ import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import uz.mirkomil.learnjava.R
 import uz.mirkomil.learnjava.utils.startFragment
-import java.util.*
 
 abstract class BaseFragment(@LayoutRes private  val layout: Int,val canswipe : Boolean = false) : Fragment(layout), View.OnKeyListener {
     private var isUseBackPress = true

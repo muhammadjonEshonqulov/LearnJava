@@ -2,7 +2,7 @@ package uz.mirkomil.learnjava.ui.beginner.view
 
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import uz.intalim.ui.base.BaseFragment
+import uz.mirkomil.learnjava.base.BaseFragment
 import uz.mirkomil.learnjava.R
 import uz.mirkomil.learnjava.databinding.FragmentBeginnerBinding
 
@@ -18,6 +18,9 @@ class BeginnerFragment : BaseFragment(R.layout.fragment_beginner) {
         binding.beginnerLessons.layoutManager = LinearLayoutManager(requireContext())
         binding.beginnerLessons.adapter = adapter
         adapter.swapdata(getLessons())
+        binding.backBtnHelp.setOnClickListener {
+            finish()
+        }
     }
 
     fun getLessons(): ArrayList<String> {

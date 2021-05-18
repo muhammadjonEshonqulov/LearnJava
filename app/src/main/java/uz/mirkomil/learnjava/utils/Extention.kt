@@ -25,7 +25,7 @@ import androidx.annotation.ColorInt
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import uz.intalim.ui.base.BaseFragment
+import uz.mirkomil.learnjava.base.BaseFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import uz.mirkomil.learnjava.R
 import java.io.File
