@@ -4,7 +4,7 @@ import android.view.View
 import uz.mirkomil.learnjava.base.BaseFragment
 import uz.mirkomil.learnjava.R
 import uz.mirkomil.learnjava.databinding.FragmentStartBinding
-import uz.mirkomil.learnjava.ui.author.view.AuthorFragment
+import uz.mirkomil.learnjava.ui.author.view.HistoryOfJavaFragment
 import uz.mirkomil.learnjava.ui.programming.view.AboutProgrammingFragment
 import uz.mirkomil.learnjava.ui.second.view.SecondFragment
 
@@ -19,7 +19,7 @@ class StartFragment : BaseFragment(
     override fun onCreate(view: View) {
         binding = FragmentStartBinding.bind(view)
         binding.aboutProgramming.setOnClickListener(this)
-        binding.authors.setOnClickListener(this)
+        binding.historyOfJava.setOnClickListener(this)
         binding.start.setOnClickListener(this)
 
     }
@@ -29,8 +29,8 @@ class StartFragment : BaseFragment(
             R.id.about_programming -> {
                 startFragment(AboutProgrammingFragment(), isAnimate = true)
             }
-            R.id.authors -> {
-                startFragment(AuthorFragment(), isAnimate = true)
+            R.id.history_of_java -> {
+                startFragment(HistoryOfJavaFragment(), isAnimate = true)
             }
             R.id.start -> {
                 startFragment(SecondFragment(), isAnimate = true)

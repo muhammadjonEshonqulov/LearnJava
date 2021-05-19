@@ -5,7 +5,7 @@ import uz.mirkomil.learnjava.base.BaseFragment
 import uz.mirkomil.learnjava.R
 import uz.mirkomil.learnjava.databinding.FragmentAuthorBinding
 
-class AuthorFragment : BaseFragment(R.layout.fragment_author) {
+class HistoryOfJavaFragment : BaseFragment(R.layout.fragment_author) {
 
     lateinit var binding: FragmentAuthorBinding
     override fun onCreate(view: View) {

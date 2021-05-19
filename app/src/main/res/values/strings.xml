@@ -1,3 +1,72 @@
 <resources>
     <string name="app_name">Learn Java</string>
+    <string name="historyjavatext1">1. Java nima?
+        <br> Java dasturlash tili va platforma.</br>
+        <br> Java yuqori darajali, mustahkam, xavfsiz va obyektga yo`naltirilgan til. Platforma: dastur bajarila oladigan ixtiyoriy apparat yoki dasturiy muhit platformadir. Javaning ham o`zini mahsus bajarilish muhiti – platformasi mavjud (JRE – Java Runtime Environment).</br>
+        <br> 2. Javadan qayerda foydalaniladi?</br>
+        <br> “Sun” firmasi ma`lumotiga ko`ra, 3 mlrd atrofidagi qurilmalar Javani ishlatadi (eski ma`lumot, hozir undan ko`p).</br>
+        <br> Mana ulardan ba`zilari:</br>
+        <br> -Shaxsiy kompyuter dasturlari (Desktop Applications) – acrobat reader, media-pleyer, antiviruslar va h.k.</br>
+        <br> -Web-dasturlar</br>
+        <br> -Korxona-tashkilotlar dasturlari (Enterprise Applications) – bank yoki ishlab chiqarishga oid dasturlar</br>
+        <br> -Mobil dasturlar</br>
+        <br> -Smart kartalar</br>
+        <br> -Robotlar</br>
+        <br> -O`yinlar</br>
+        <br> -…..</br>
+        <br> 3. Java (JavaScript tili bilan adashtirmang, bir-biriga o’xshash emas) dasturlari odatda bayt kodlarga (bytecode) kompilyatsiya qilinadi(class fayli tarzida) va bu har qanday Java platformasida ishlashini ta’minlaydi. Java platformasi apparat yoki dasturiy muhit bo`lishi mumkin. O`zbekstonda Javada bevosita ishlaydigan apparatlar kam uchraydi. Bizda JVM, ya`ni Java Virtual Machine keng tarqalgan.</br>
+        <br> 4. Asosiy konsepsiyalari:</br>
+        <br> Java quyidagi 5 maqsad uchun qurilgan, u shunday til bo’lishi kerakki:</br>
+        <br> 1.	Oddiy, obyektga mo’ljallangan, taqsimlangan va o’rganishga oson bo’lsin.</br>
+        <br> 2.	Mustahkam va xavsiz bo’lsin</br>
+        <br> 3.	Qaysidir qurilma platformasidan yoki uning arxitekturasidan mustaqil bo’lsin(ya’ni qaysidir platformaga tobe bo’lmasin).</br>
+        <br> 4.	Juda samarali bo’lsin.</br>
+        <br> 5.	Dasturlash tili uchun tarjimon(interpreter) yozish mumkin bo’lsin.</br>
+        <br> Shuningdek dasturlash tili parallel ishlashni va dinamik tiplashda foydalanishni ta’minlay olsin.</br>
+        <br> 5. Dunyo bo’yicha dasturlash sohasidagi eng yetakchi hisoblangan stackoverflow.com saytini 2013-2015 yillardagi tekshiruvlariga(http://stackoverflow.com/research/developer-survey- 2015#tech-lang) ko’ra server-tomon(server side) dasturlash tillari ichida Java 1-o’rinni bermay kelmoqda. Undan tashqari o’sha saytning eng ko’p beriladigan savollar uchun foydalinadigan teglarida ham Java yetakchi o`rinlarda turibdi.</br>
+        <br> 6. Javada qanaqa dasturlar yoziladi: asosan 4 tipdagi</br>
+        <br> 1) Standalone applications – Linux, Mac yoki Windowsga o`rnatib, kundalik ishladatigan dasturlarimiz: mp3 pleyer, ofis, antivirus kabilar. Ular AWT, Swing yoki JavaFX texnologiyalari orqali tuziladi</br>
+        <br> 2) Web Applications – tarmoq orqali ishlovchi ixtiyoriy dasturlar. Eslatma: web dasturlar ikki qismdan, server tomon hamda klient tomon (brauzer) dan iborat. Javada faqat server tomoni uchun yoziladi. Bunda servlet, jsp, jsf kabi fundamental texnologiyalardan boshlab Spring, Play kabi freymworklar qo`l keladi. Umuman olganda brauzer uchun HTML, CSS hamda Java Scriptdan boshqa tilda yozib bo`lmaydi.</br>
+        <br> 3) Enterprise Applications – bu dasturlar yirik salmoqqa ega bo`lib, odatda katta jabhalarda ishlatiladi. Banklar, tashkilotlar yoki astronomiya ishlarida. Ular yuqori havfsizlik, yuklamani (nagruzka) serverlarga teng taqsimlash (load balancing) yoki klasterlash (clustering – katta tizimdan xuddi yagona obyekt sifatida foydalanish) kabi sifatlarni talab qiladi. Javada bular bor.</br>
+        <br> 4) Mobile Applications – Mobil qurilmalarga mos dasturlarni ham Javada yozish mumkin. Androiddan boshlab, Java ME (JME – Java Micro Edition) gacha. JME ga misol qilib, Nokia telefonlarimiz uchun ishlangan JAR o`yinlarni misol keltirish mumkin.</br>
+        <br> 7. Javaning sintaksisi C++ ga asoslangan. Shuning uchun C++ tilini biladiganlar Javani oson o`rganishadi. Lekin undagi ko`pchilik xususiyatlar olib tashlangan. Masalan: Pointer(ko`rsatkich)lar bilan to`g`ri ishlash, ya`ni Javada alohida ko`rsatkich tushunchasi yo`q. Operatorlarni qayta yuklash ham olib tashlangan. Yana eng muhimi, ishlatilmaydigan xotira (unreferenced objects) avtomatik tozalanadi. Buni Javadagi Garbage Collector (GC – chiqindi yig`ishtirgich) amalga oshiradi. C++ da bu destruktorlar orqali qo`lda (manual – ruchnoy) qilingan. Bundan tashqari Java har bir yangi versiyada bundan qulay imkoniyatlarni qo`shib kelmoqda. Ayni paytda oxirgi versiya 8-sidir. 2014-yil 18-martda ommaga e’lon qilindi.</br>
+        <br> 8. JRE va JDK ni nima farqi bor? JRE – Java Runtime Environment JDK – Java Development Kit JRE bu faqat dastur bajarilishi uchun kerak bo`lgan muhit, xolos. Dasturchi bo`lmagan oddiy foydalanuvchilarga Java dasturlari bajarilishi uchun JRE yetarli. JDK = JRE + dasturlashga oid qo`shimcha instrumentlar. Bu esa dasturchilarga kerak. Formuladan ko`rinib turibdiki, JDK ning hajmi JREdan katta bo`ladi. U bir marta ko`chirib o`rnatiladi xolos.</br>
+        <br> 9. Dunyoda qancha Java dasturchilar bor?</br>
+        <br> Oracle kompaniyasi tahminan 9 mln desa, Wikipedia 10 mln atrofida demoqda. NumberOf.net komandasi esa 9.007.346 sonini keltirishgan. Albatta bu statistika qaysidir vaqt uchun. Ayni paytda yana o`sib bormoqda. Javada kod yozishga mo`ljallangan Eclipse (bepul) muhiti bir yilni ichida 7 mln marta ko`chirilgan. Eng mashxur web-konteynerlardan biri bo`lgan Tomcat esa oyiga o`rtacha 550 ming, yiliga esa 6.6 mln marta ko`chirilar ekan. Dunyoda qancha odam ishsiz? Ishlilarning qanchasi dasturchi? Dasturchilarning shunchasi Javachi!</br>
+        <br> 10. Nima uchun aynan Javani o`rganamiz?</br>
+        <br> Hozirgi kunda dasturlash tillari to`g`risidagi ayrim tortishuvlar quloqqa chalinadi. Bu til yaxshi… Yo`q, mana bunisi… Bu tilda qilingan ishni, bunisida qilib bo`lmas emish, mana bunisi eng tezi emish va hokazo. Bular xato fikrlar. Biz dasturlash tillarini imkoniyati haqida tortishayotkan bir paytda, g`arbliklar boshqa galaktikalarni o`rganib, odamni boshini boshqa tanaga ko`chirishni amallashmoqchi! Keling, bu tortishuvga bitta o`zbekona o`xshatish bilan nuqta qo`yamiz. “Lacetti yaxshi… Yo`q Nexia yo`lga zo`r… Malibu qulay va obro`li… Captiva undanam obro`li… Sparkka yetmaydi baribir va hokazo”. Sezganingizdek, bu xato tortishuv. Hammasini o`z o`rni va maqsadi bor. Dasturlash tillari ham shu kabidir. Javaning ham o`z maqsadi bor. Kerak bo`lsa, bir nechta tillardan foydalanib yagona kompleks dastur yozish mumkin.</br>
+        <br></br>
+        <br> 1-dars jdk urnatish:</br>
+        <br> Java dasturlash tilida dastur tuzish uchun, dastlab, kompyuterga kerakli dasturlarni o\'rnatish lozim. Birinchidan, Java dasturlarni ishga tushirish uchun, bizga Java-mashina kerak bo\'ladi. Gap shundaki, barcha Java dasturlar faqat Java-mashina o\'rnatilgan kompyuterlarda ishlaydi. Java-mashina Java dastur uchun muhit hisoblanadi. Ikkinchidan, Java dasturlarni yozish uchun maxsus muhit(IDE) kerak bo\'ladi. Ikkala dasturni ham oraclening saytidan yuklab olishingiz mumkin. Yuklab olish uchun Oracle saytiga kiramiz va Java Platform(JDK)ni yuklab olamiz.</br>
+</string>
+    <string name="historyjavatext2">JDKni yuklab oladigan oynaga o\'tamiz va litsenziyaga rozi
+        bo\'lamiz(Accept License Agreement). Undan so\'ng kompyuteringizga mos keladigan JDKni tanlaymiz, agar 32 bitlik tizim
+        bo\'lsa, «jdk-8u20-windows-i586.exe«ni tanlaymiz va yuklashni boshlaymiz.</string>
+    <string name="historyjavatext3">
+        Yuklab olingandan so\'ng, dasturni ishga tushiramiz va berilgan savollarga qarab o\'rnatamiz(unchalik qiyiin ish emas va ko\'p vaqt ham kerak emas).
+Odatda JDK «C:\Program files\Java» adresiga o\'rnatiladi.
+Keling endi, java bajaruvchi utilitlarini topamiz. Uning uchun quyidagi papkaga kiramiz:
+C:\Program files\jdk*\bin\
+Bu adresda JDKning barcha bajariluvchi fayllari joylashgan. Biz ularni, operatsion tizimga ham ma\'lum qilib qo\'yishimiz lozim. Operatsion tizim bularni bilib olsa, bemalol «Командная строка» orqali ham ishlatishimiz mumkin bo\'ladi. Buni Windows 7 misolida ko\'rsataman.
+Мой компьютер->Свойства, chap tomonda «Дополнительные параметры системы» bo\'limiga kiramiz va quyidagi oynani ko\'ramiz.
+
+    </string>
+    <string name="historyjavatext4">Bu oynadan «Переменные среды» tugmasini bosamiz, hosil bo\'lgan oynaning «Системные переменные» bo\'limidan «PATH» o\'zgaruvchisini(переменная)qidirib, uni belgilaymiz va «Изменить» tugmasini bosamiz.</string>
+    <string name="historyjavatext5">Shundan so\'ng, «Значение переменной«dagi qiymatlarning oxiriga o\'tamiz va » C:\Program Files\Java\jdk*\bin» adresini kiritamiz(* o\'rniga o\'zingizning jdk adresingiz bo\'ladi, ya\'ni mavjud papka nomi). «OK» tugmalarini bosib, bu oynalardan chiqib ketamiz va kompyuterni qayta yuklaymiz.
+Hozircha shu, xulosa qiladigan bo\'lsak, biz bu maqolada, o\'zida Java kompilyatorni saqlaydigan, qaysiki biz yozgan Java kodlarni bayt kodga(kompyuter tushunadigan kodga) o\'tkazib beradigan, undan tashqari yozilgan kodlarni ishlatish uchun kerak bo\'ladigan Java-mashinani ham o\'zida mujassam etgan JDK(Java Development Kit)ni yuklashni, o\'rnatishni va operatsion tizimga o\'rnatilgan joyini e\'lon qilishni ko\'rib chiqdik.
+2-dars    netbans urnatish:
+Java dasturlash tilida dastur tuzish uchun, dastlab, kompyuterga kerakli dasturlarni o\'rnatish lozim. Birinchidan, Java dasturlarni ishga tushirish uchun, bizga Java-mashina kerak bo\'ladi. Gap shundaki, barcha Java dasturlar faqat Java-mashina o\'rnatilgan kompyuterlarda ishlaydi. Java-mashina Java dastur uchun muhit hisoblanadi. Ikkinchidan, Java dasturlarni yozish uchun maxsus muhit(IDE) kerak bo\'ladi. Ikkala dasturni ham oraclening saytidan yuklab olishingiz mumkin. Yuklab olish uchun Oracle saytiga kiramiz va Java Platform(JDK)ni yuklab olamiz.
+</string>
+    <string name="historyjavatext6">JDKni yuklab oladigan oynaga o\'tamiz va litsenziyaga rozi bo\'lamiz(Accept License Agreement). Undan so\'ng kompyuteringizga mos keladigan JDKni tanlaymiz, agar 32 bitlik tizim bo\'lsa, «jdk-8u20-windows-i586.exe«ni tanlaymiz va yuklashni boshlaymiz.</string>
+    <string name="historyjavatext7">Yuklab olingandan so\'ng, dasturni ishga tushiramiz va berilgan savollarga qarab o\'rnatamiz(unchalik qiyiin ish emas va ko\'p vaqt ham kerak emas).
+Odatda JDK «C:\Program files\Java» adresiga o\'rnatiladi.
+Keling endi, java bajaruvchi utilitlarini topamiz. Uning uchun quyidagi papkaga kiramiz:
+C:\Program files\jdk*\bin\
+Bu adresda JDKning barcha bajariluvchi fayllari joylashgan. Biz ularni, operatsion tizimga ham ma\'lum qilib qo\'yishimiz lozim. Operatsion tizim bularni bilib olsa, bemalol «Командная строка» orqali ham ishlatishimiz mumkin bo\'ladi. Buni Windows 7 misolida ko\'rsataman.
+Мой компьютер->Свойства, chap tomonda «Дополнительные параметры системы» bo\'limiga kiramiz va quyidagi oynani ko\'ramiz.
+</string>
+    <string name="historyjavatext8">Bu oynadan «Переменные среды» tugmasini bosamiz, hosil bo\'lgan oynaning «Системные переменные» bo\'limidan «PATH» o\'zgaruvchisini(переменная)qidirib, uni belgilaymiz va «Изменить» tugmasini bosamiz.</string>
+    <string name="historyjavatext9">Shundan so\'ng, «Значение переменной«dagi qiymatlarning oxiriga o\'tamiz va » C:\Program Files\Java\jdk*\bin» adresini kiritamiz(* o\'rniga o\'zingizning jdk adresingiz bo\'ladi, ya\'ni mavjud papka nomi). «OK» tugmalarini bosib, bu oynalardan chiqib ketamiz va kompyuterni qayta yuklaymiz.
+Hozircha shu, xulosa qiladigan bo\'lsak, biz bu maqolada, o\'zida Java kompilyatorni saqlaydigan, qaysiki biz yozgan Java kodlarni bayt kodga(kompyuter tushunadigan kodga) o\'tkazib beradigan, undan tashqari yozilgan kodlarni ishlatish uchun kerak bo\'ladigan Java-mashinani ham o\'zida mujassam etgan JDK(Java Development Kit)ni yuklashni, o\'rnatishni va operatsion tizimga o\'rnatilgan joyini e\'lon qilishni ko\'rib chiqdik.
+</string>
 </resources>

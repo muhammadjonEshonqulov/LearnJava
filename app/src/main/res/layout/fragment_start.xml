@@ -27,7 +27,7 @@
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/authors"
+        android:id="@+id/history_of_java"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
