@@ -5,6 +5,9 @@ import uz.mirkomil.learnjava.base.BaseFragment
 import uz.mirkomil.learnjava.R
 import uz.mirkomil.learnjava.databinding.FragmentSecondBinding
 import uz.mirkomil.learnjava.ui.beginner.view.BeginnerFragment
+import uz.mirkomil.learnjava.ui.library.view.LibraryFragment
+import uz.mirkomil.learnjava.ui.lesson.view.LessonFragment
+import uz.mirkomil.learnjava.ui.oop.view.OopFragment
 
 class SecondFragment: BaseFragment(R.layout.fragment_second) {
 
@@ -16,6 +19,12 @@ class SecondFragment: BaseFragment(R.layout.fragment_second) {
         }
         binding.beginners.setOnClickListener {
             startFragment(BeginnerFragment(),isAnimate = true)
+        }
+        binding.oop.setOnClickListener {
+            startFragment(OopFragment(),isAnimate = true)
+        }
+        binding.library.setOnClickListener {
+            startFragment(LibraryFragment(),isAnimate = true)
         }
     }
 }

@@ -31,14 +31,15 @@
             android:layout_gravity="center"
             android:layout_marginStart="7dp"
             android:padding="7dp"
-            android:text="Dasturlash haqida"
+            android:text="OOP Haqida"
             android:textColor="@color/white"
             android:textSize="20sp" />
     </LinearLayout>
 
     <TextView
+        android:id="@+id/lesson_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Dasturlash Haqida" />
+        android:text="OOP Haqida" />
 </RelativeLayout>

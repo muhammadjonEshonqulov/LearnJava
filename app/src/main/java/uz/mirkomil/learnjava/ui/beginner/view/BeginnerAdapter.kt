@@ -10,10 +10,15 @@ class BeginnerAdapter : SingleTypeAdapter<String>(R.layout.item_beginner, ArrayL
     lateinit var binding: ItemBeginnerBinding
     var listener: ((String) -> Unit)? = null
 
+    fun setOnclick(listener: ((String) -> Unit)?){
+        this.listener = listener
+    }
 
     override fun bindData(itemView: View, position: Int) {
         binding = ItemBeginnerBinding.bind(itemView)
         binding.itemName.text = data[position]
-
+        binding.itemBack.setOnClickListener {
+            listener?.invoke(data[position])
+        }
     }
 }
