@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/action_bar_help"
@@ -31,29 +30,16 @@
             android:layout_gravity="center"
             android:layout_marginStart="7dp"
             android:padding="7dp"
-            android:text="1-Dars"
+            android:text="Test"
             android:textColor="@color/white"
             android:textSize="20sp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/maruza"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/test"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/back_btn"
-        android:text="Maruza"
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:layout_margin="16dp"
-        android:background="@drawable/back_btn"
-        android:text="test"
-        android:textColor="@color/white" />
+        android:gravity="center"
+        android:text="Test"
+        android:textColor="@color/black" />
 </RelativeLayout>

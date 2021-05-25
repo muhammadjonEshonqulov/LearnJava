@@ -32,7 +32,7 @@ class BeginnerFragment : BaseFragment(R.layout.fragment_beginner) {
     fun getLessons(): ArrayList<String> {
         val data = ArrayList<String>()
         data.clear()
-        for (i in 1..30) {
+        for (i in 1..15) {
             data.add("$i - Dars")
         }
 

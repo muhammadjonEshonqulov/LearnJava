@@ -36,10 +36,9 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/lesson_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="OOP Haqida" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_oop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar_help" />
 </RelativeLayout>

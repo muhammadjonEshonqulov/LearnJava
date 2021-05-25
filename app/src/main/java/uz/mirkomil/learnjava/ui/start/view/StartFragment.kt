@@ -9,9 +9,7 @@ import uz.mirkomil.learnjava.ui.programming.view.AboutProgrammingFragment
 import uz.mirkomil.learnjava.ui.second.view.SecondFragment
 
 
-class StartFragment : BaseFragment(
-    R.layout.fragment_start, canswipe = true
-), View.OnClickListener {
+class StartFragment : BaseFragment(R.layout.fragment_start, canswipe = true), View.OnClickListener {
     var downloadedSize = 0
     var totalsize: Int = 0
     lateinit var binding: FragmentStartBinding
