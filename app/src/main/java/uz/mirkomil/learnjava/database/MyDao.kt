@@ -6,6 +6,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import io.reactivex.Completable
 import io.reactivex.Observable
+import uz.mirkomil.learnjava.model.LessonData
 import uz.mirkomil.learnjava.model.Test
 
 
@@ -21,6 +22,16 @@ interface MyDao {
 
     @Query("delete from Test")
     fun clearTest(): Completable
+
+    // lesson
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun saveLessonData(questions: List<LessonData>): Completable
+
+    @Query("select * from LessonData where lessonId = :id")
+    fun getLessonData(id:Int): Observable<List<LessonData>>
+
+    @Query("delete from LessonData")
+    fun clearLessonData(): Completable
 
 
 }

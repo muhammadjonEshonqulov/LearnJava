@@ -30,7 +30,7 @@ class OopFragment : BaseFragment(R.layout.fragment_oop) {
     fun getLessons(): ArrayList<String> {
         val data = ArrayList<String>()
         data.clear()
-        for (i in 1..15) {
+        for (i in 1..11) {
             data.add("$i - Dars")
         }
         return data

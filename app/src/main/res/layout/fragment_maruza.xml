@@ -35,11 +35,9 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_maruza"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:text="Maruza"
-        android:textColor="@color/black" />
+        android:layout_below="@id/action_bar_help" />
 </RelativeLayout>

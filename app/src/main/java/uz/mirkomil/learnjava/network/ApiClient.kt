@@ -42,7 +42,7 @@ object ApiClient {
 
             retrofit = Retrofit.Builder()
                 .client(getClient(""))
-                .baseUrl("")
+                .baseUrl("http://myapi.intalim.uz/api/")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()

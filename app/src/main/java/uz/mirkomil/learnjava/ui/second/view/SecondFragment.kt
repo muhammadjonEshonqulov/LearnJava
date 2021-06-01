@@ -5,8 +5,8 @@ import uz.mirkomil.learnjava.base.BaseFragment
 import uz.mirkomil.learnjava.R
 import uz.mirkomil.learnjava.databinding.FragmentSecondBinding
 import uz.mirkomil.learnjava.ui.beginner.view.BeginnerFragment
+import uz.mirkomil.learnjava.ui.maruza.view.MaruzaFragment
 import uz.mirkomil.learnjava.ui.library.view.LibraryFragment
-import uz.mirkomil.learnjava.ui.lesson.view.LessonFragment
 import uz.mirkomil.learnjava.ui.oop.view.OopFragment
 
 class SecondFragment: BaseFragment(R.layout.fragment_second) {

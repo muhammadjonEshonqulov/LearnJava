@@ -3,6 +3,7 @@ package uz.mirkomil.learnjava.repository
 import android.content.Context
 import uz.mirkomil.learnjava.database.MyDao
 import uz.mirkomil.learnjava.database.MyDatabase
+import uz.mirkomil.learnjava.model.LessonData
 import uz.mirkomil.learnjava.model.Test
 import uz.mirkomil.learnjava.network.ApiClient
 import uz.mirkomil.learnjava.network.ApiInterface
@@ -30,10 +31,18 @@ class Repository private constructor(private val apiInterface: ApiInterface, con
         }
     }
 
-    // driver license
-    fun saveDriverLicense(data: Test) = myDao.saveTest(data)
-    fun getDriverLicense() = myDao.getTest()
-    fun clearTestDriverLicense() = myDao.clearTest()
+    // test
+    fun saveTest(data: Test) = myDao.saveTest(data)
+    fun getTest() = myDao.getTest()
+    fun clearTest() = myDao.clearTest()
+
+
+    // lesson
+    fun saveLessonData(data: List<LessonData>) = myDao.saveLessonData(data)
+    fun getLessonData(id:Int) = myDao.getLessonData(id)
+    fun clearLessonData() = myDao.clearLessonData()
+
+
 
 
 }
