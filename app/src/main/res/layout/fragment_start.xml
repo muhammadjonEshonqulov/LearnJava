@@ -1,48 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/logo"
     android:gravity="center|top"
-    android:orientation="vertical"
-    android:paddingTop="100dp">
+    android:orientation="vertical">
 
-    <TextView
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.9"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:gravity="center"
-        android:text="Java dasturlashni o'rganish"
-        android:textColor="@color/cl_color_primary"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/about_programming"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@drawable/back_btn"
-        android:text="Dasturlash haqida"
-        android:textColor="@color/white" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:background="#B3090909"
+            android:text="Java dasturlashni o'rganish"
+            android:textColor="@color/cl_color_primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/history_of_java"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/back_btn"
-        android:text="Java dasturlash tili tarixi"
-        android:textColor="@color/white" />
+        <Button
+            android:id="@+id/about_programming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/back_btn"
+            android:text="Dasturlash haqida"
+            android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@drawable/back_btn"
-        android:text="Kirish"
-        android:textColor="@color/white" />
+        <Button
+            android:id="@+id/history_of_java"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/back_btn"
+            android:text="Java dasturlash tili tarixi"
+            android:textColor="@color/white" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/back_btn"
+            android:text="Kirish"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>
