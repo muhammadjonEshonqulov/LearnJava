@@ -1,5 +1,6 @@
 package uz.mirkomil.learnjava.ui.beginner.presenter
 
+import android.util.Log
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -16,7 +17,9 @@ class BeginnerPresenter(val view: BeginnerView, val repository: Repository) {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                       cm.clear()
+                Log.d("TTT", "saved beginner "+data.size)
+
+                cm.clear()
             },{
                 view.showError(""+it.message)
 

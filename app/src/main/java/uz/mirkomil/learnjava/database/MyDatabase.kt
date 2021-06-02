@@ -8,7 +8,7 @@ import uz.mirkomil.learnjava.model.LessonData
 import uz.mirkomil.learnjava.model.Test
 
 
-@Database(entities = [Test::class, LessonData::class], version = 1)
+@Database(entities = [Test::class, LessonData::class], version = 2)
 
 abstract class MyDatabase : RoomDatabase() {
     abstract fun dao(): MyDao

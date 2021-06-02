@@ -39,7 +39,7 @@ class Repository private constructor(private val apiInterface: ApiInterface, con
 
     // lesson
     fun saveLessonData(data: List<LessonData>) = myDao.saveLessonData(data)
-    fun getLessonData(id:Int) = myDao.getLessonData(id)
+    fun getLessonData(subjectId: Int, lessonId: Int) = myDao.getLessonData(subjectId, lessonId)
     fun clearLessonData() = myDao.clearLessonData()
 
 

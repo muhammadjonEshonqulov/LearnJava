@@ -14,7 +14,8 @@ class LessonFragment : BaseFragment(R.layout.fragment_lesson), LessonView {
 
     lateinit var binding: FragmentLessonBinding
     lateinit var presenter: LessonPresenter
-    var idd = 0
+    var lessonId = 0
+    var subjectId = 0
 
     override fun onCreate(view: View) {
         binding = FragmentLessonBinding.bind(view)
@@ -24,14 +25,17 @@ class LessonFragment : BaseFragment(R.layout.fragment_lesson), LessonView {
         }
         arguments?.getInt("lesson_id")?.let {
             binding.titleHelp.text = "$it- Dars"
-            idd = it
+            lessonId = it
+        }
+        arguments?.getInt("subject_id")?.let {
+            subjectId = it
         }
 
         binding.test.setOnClickListener {
             startFragment(TestFragment(), isAnimate = true)
         }
         binding.maruza.setOnClickListener {
-            val bundle = bundleOf("lesson_id" to idd)
+            val bundle = bundleOf("lesson_id" to lessonId, "subject_id" to subjectId)
             startFragment(MaruzaFragment(), bundle, isAnimate = true)
         }
     }

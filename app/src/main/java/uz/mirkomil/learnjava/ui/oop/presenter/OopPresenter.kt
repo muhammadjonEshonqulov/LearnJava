@@ -1,28 +1,27 @@
-package uz.mirkomil.learnjava.ui.maruza.presenter
+package uz.mirkomil.learnjava.ui.oop.presenter
 
 import android.util.Log
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import uz.mirkomil.learnjava.model.LessonData
 import uz.mirkomil.learnjava.repository.Repository
-import uz.mirkomil.learnjava.ui.beginner.view.MaruzaView
+import uz.mirkomil.learnjava.ui.oop.view.OopView
 
-class MaruzaPresenter(val view: MaruzaView, val repository: Repository) {
+class OopPresenter(val view:OopView, val repository: Repository) {
 
-    fun getLessonData(subjectId: Int, lessonId: Int){
+
+    fun saveLessons(data:List<LessonData>){
         val cm = CompositeDisposable()
-        cm.add(repository.getLessonData(subjectId, lessonId)
+        cm.add(repository.saveLessonData(data)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                Log.d("TTT", "size "+it.size)
-                view.savedLesson(it)
-                       cm.clear()
+                cm.clear()
+                Log.d("TTT", "saved oop "+data.size)
             },{
                 view.showError(""+it.message)
 
             }))
     }
-
-
 }

@@ -27,8 +27,8 @@ interface MyDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun saveLessonData(questions: List<LessonData>): Completable
 
-    @Query("select * from LessonData where lessonId = :id")
-    fun getLessonData(id:Int): Observable<List<LessonData>>
+    @Query("select * from LessonData where lessonId = :lessonId and subject = :subjectId")
+    fun getLessonData(subjectId: Int, lessonId: Int): Observable<List<LessonData>>
 
     @Query("delete from LessonData")
     fun clearLessonData(): Completable

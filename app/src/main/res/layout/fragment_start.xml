@@ -25,8 +25,8 @@
             android:layout_marginTop="100dp"
             android:gravity="center"
             android:background="#B3090909"
-            android:text="Java dasturlashni o'rganish"
-            android:textColor="@color/cl_color_primary"
+            android:text="Java dasturlash tilini o'rganish"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
 

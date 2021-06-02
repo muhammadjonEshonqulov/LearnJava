@@ -2,17 +2,14 @@ package uz.mirkomil.learnjava.ui.maruza.view
 
 import android.util.Log
 import android.view.View
-import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.LinearLayoutManager
 import uz.mirkomil.learnjava.base.BaseFragment
 import uz.mirkomil.learnjava.R
-import uz.mirkomil.learnjava.databinding.FragmentBeginnerBinding
 import uz.mirkomil.learnjava.databinding.FragmentMaruzaBinding
 import uz.mirkomil.learnjava.model.LessonData
 import uz.mirkomil.learnjava.repository.Repository
 import uz.mirkomil.learnjava.ui.beginner.view.MaruzaView
 import uz.mirkomil.learnjava.ui.maruza.presenter.MaruzaPresenter
-import uz.mirkomil.learnjava.ui.lesson.view.LessonFragment
 
 class MaruzaFragment : BaseFragment(R.layout.fragment_maruza), MaruzaView {
 
@@ -25,8 +22,13 @@ class MaruzaFragment : BaseFragment(R.layout.fragment_maruza), MaruzaView {
         binding = FragmentMaruzaBinding.bind(view)
         presenter = MaruzaPresenter(this, Repository.getRepositoryWithApiClient(requireContext()))
 
-        arguments?.getInt("lesson_id")?.let {
-            presenter.getLessonData(it)
+        arguments?.getInt("lesson_id")?.let { lessonId ->
+            arguments?.getInt("subject_id")?.let { subjectId ->
+                presenter.getLessonData(subjectId, lessonId)
+                Log.d("TTT", "subjectId : $subjectId ")
+                Log.d("TTT", "lessonId : $lessonId ")
+
+            }
         }
 
         binding.backBtnHelp.setOnClickListener {

@@ -8,9 +8,9 @@ import uz.mirkomil.learnjava.databinding.ItemBeginnerBinding
 class OopAdapter : SingleTypeAdapter<String>(R.layout.item_beginner, ArrayList()) {
 
     lateinit var binding: ItemBeginnerBinding
-    var listener: ((String) -> Unit)? = null
+    var listener: ((Int) -> Unit)? = null
 
-    fun setOnclick(listener: ((String) -> Unit)?){
+    fun setOnclick(listener: ((Int) -> Unit)?){
         this.listener = listener
     }
 
@@ -18,7 +18,7 @@ class OopAdapter : SingleTypeAdapter<String>(R.layout.item_beginner, ArrayList()
         binding = ItemBeginnerBinding.bind(itemView)
         binding.itemName.text = data[position]
         binding.itemBack.setOnClickListener {
-            listener?.invoke(data[position])
+            listener?.invoke(position)
         }
     }
 }
