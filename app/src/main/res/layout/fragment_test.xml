@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/backgroun_color">
 
     <LinearLayout
         android:id="@+id/action_bar_help"
@@ -18,7 +19,6 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
-            android:clipToPadding="true"
             android:padding="7dp"
             android:src="@drawable/back_arrow"
             app:tint="@color/white" />
@@ -36,10 +36,100 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/test_pos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar_help"
+        android:layout_margin="16dp"
+        android:text="Savol 1/5"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar_help"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@+id/time_test"
+        android:src="@drawable/ic_clock" />
+
+    <TextView
+        android:id="@+id/time_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar_help"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:text="10:00"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:text="Test"
-        android:textColor="@color/black" />
+        android:layout_above="@+id/bottom_test"
+        android:layout_below="@id/test_pos" />
+
+    <LinearLayout
+        android:id="@+id/bottom_test"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/previous"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_left_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Ortga" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="Oldinga" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="16dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_right_follow" />
+        </RelativeLayout>
+    </LinearLayout>
 </RelativeLayout>

@@ -1,29 +1,23 @@
-package uz.mirkomil.learnjava.ui.beginner.presenter
+package uz.mirkomil.learnjava.ui.test.presenter
 
-import android.util.Log
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import uz.mirkomil.learnjava.model.LessonData
+import uz.mirkomil.learnjava.model.Test
 import uz.mirkomil.learnjava.repository.Repository
-import uz.mirkomil.learnjava.ui.beginner.view.BeginnerView
-import uz.mirkomil.learnjava.ui.beginner.view.MaruzaView
+import uz.mirkomil.learnjava.ui.test.view.TestView
 
-class BeginnerPresenter(val view: BeginnerView, val repository: Repository) {
-
-    fun saveLessons(data:List<LessonData>){
+class TestPresenter(val view:TestView, val repository: Repository) {
+    fun getTest(subjectId: Int, lessonId: Int){
         val cm = CompositeDisposable()
-        cm.add(repository.saveLessonData(data)
+        cm.add(repository.getTest(subjectId, lessonId)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                Log.d("TTT", "saved beginner "+data.size)
-
+                view.getTest(it)
                 cm.clear()
             },{
                 view.showError(""+it.message)
-
             }))
     }
-
 }

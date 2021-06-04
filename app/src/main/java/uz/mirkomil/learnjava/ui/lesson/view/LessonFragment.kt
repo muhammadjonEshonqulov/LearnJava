@@ -5,10 +5,11 @@ import androidx.core.os.bundleOf
 import uz.mirkomil.learnjava.R
 import uz.mirkomil.learnjava.base.BaseFragment
 import uz.mirkomil.learnjava.databinding.FragmentLessonBinding
+import uz.mirkomil.learnjava.model.Test
 import uz.mirkomil.learnjava.repository.Repository
 import uz.mirkomil.learnjava.ui.lesson.presenter.LessonPresenter
 import uz.mirkomil.learnjava.ui.maruza.view.MaruzaFragment
-import uz.mirkomil.learnjava.ui.test.TestFragment
+import uz.mirkomil.learnjava.ui.test.view.TestFragment
 
 class LessonFragment : BaseFragment(R.layout.fragment_lesson), LessonView {
 
@@ -20,6 +21,7 @@ class LessonFragment : BaseFragment(R.layout.fragment_lesson), LessonView {
     override fun onCreate(view: View) {
         binding = FragmentLessonBinding.bind(view)
         presenter = LessonPresenter(this, Repository.getRepositoryWithApiClient(requireContext()))
+        presenter.saveTest(getTestAll())
         binding.backBtnHelp.setOnClickListener {
             finish()
         }
@@ -32,7 +34,8 @@ class LessonFragment : BaseFragment(R.layout.fragment_lesson), LessonView {
         }
 
         binding.test.setOnClickListener {
-            startFragment(TestFragment(), isAnimate = true)
+            val bundle = bundleOf("lesson_id" to lessonId, "subject_id" to subjectId)
+            startFragment(TestFragment(),bundle, isAnimate = true)
         }
         binding.maruza.setOnClickListener {
             val bundle = bundleOf("lesson_id" to lessonId, "subject_id" to subjectId)
@@ -40,6 +43,22 @@ class LessonFragment : BaseFragment(R.layout.fragment_lesson), LessonView {
         }
     }
 
+    fun getTestAll() : ArrayList<Test>{
+        val data  = ArrayList<Test>()
+        data.add(Test(1,1, 1, "jdk nima", "Java Runtime Environment ", "Java Development Kit (Java dashturlash uskunasi)", "dasturlash muhiti","2"))
+        data.add(Test(1,1, 2, "Jdk ni qaysi operatsion tizimlarga yuklasa buladi", "Android operatsion tizim ", "Linux OT", "hamma operatsion tizimlarga","3"))
+        data.add(Test(1,1, 3, "jdk qaysi faylda saqlanadi", "d:/program files/java/bin", "c:/program files/java/bin", "c. hech faylda sqalanmaydi,","2"))
+
+        data.add(Test(1,2, 1, "Netbeans nima", "dasturlash muhiti", "dasturlash tili", "komponenta","1"))
+        data.add(Test(1,2, 2, "Netbeans qachon ishlab chiqilgan", "1988", "1996","2000","2"))
+        data.add(Test(1,2, 3, "Netbeans qaysi dasturlash tillarini qullab quvatlaydi.", "python,html,css", "PHP,c,c++,java","java ,python","2"))
+        data.add(Test(1,2, 4, "Netbeans qaysi davlatda paydo bo’lgan", "Rossiya", " CHexiya","Aqsh","2"))
+        data.add(Test(1,2, 5, "U 90-yillarning oxirida qaysi korxona tomonidan sotib olingan ", "Sun Microsystems", "Apple","Amazon","1"))
+
+//        data.add(Test(1,2, 5, "", "", "","","2"))
+
+        return data
+    }
     override fun showError(s: String) {
         toast(s)
     }

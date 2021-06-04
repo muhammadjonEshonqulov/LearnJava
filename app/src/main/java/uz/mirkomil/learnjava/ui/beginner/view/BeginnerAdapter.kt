@@ -1,11 +1,13 @@
 package uz.mirkomil.learnjava.ui.beginner.view
 
+import android.annotation.SuppressLint
 import android.view.View
 import uz.intalim.ui.base.SingleTypeAdapter
 import uz.mirkomil.learnjava.R
 import uz.mirkomil.learnjava.databinding.ItemBeginnerBinding
+import uz.mirkomil.learnjava.model.LessonData
 
-class BeginnerAdapter : SingleTypeAdapter<String>(R.layout.item_beginner, ArrayList()) {
+class BeginnerAdapter : SingleTypeAdapter<LessonData>(R.layout.item_beginner, ArrayList()) {
 
     lateinit var binding: ItemBeginnerBinding
     var listener: ((Int) -> Unit)? = null
@@ -14,9 +16,12 @@ class BeginnerAdapter : SingleTypeAdapter<String>(R.layout.item_beginner, ArrayL
         this.listener = listener
     }
 
+    @SuppressLint("SetTextI18n")
     override fun bindData(itemView: View, position: Int) {
         binding = ItemBeginnerBinding.bind(itemView)
-        binding.itemName.text = data[position]
+
+        binding.itemName.text = ""+(position+1)+"-Dars. " + data[position].tittle
+
         binding.itemBack.setOnClickListener {
             listener?.invoke(position)
         }

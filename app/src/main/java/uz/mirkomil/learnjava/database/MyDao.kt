@@ -15,10 +15,10 @@ interface MyDao {
 
     // test
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun saveTest(questions: Test): Completable
+    fun saveTest(questions: List<Test>): Completable
 
-    @Query("select * from Test")
-    fun getTest(): Observable<Test>
+    @Query("select * from Test where subject = :subjectId and lesson = :lessonId")
+    fun getTest(subjectId: Int, lessonId: Int): Observable<List<Test>>
 
     @Query("delete from Test")
     fun clearTest(): Completable

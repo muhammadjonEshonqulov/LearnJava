@@ -54,5 +54,6 @@
     <color name="line_def_color">
         #E1E1E1
     </color>
+    <color name="backgroun_color">#F4F1D5</color>
 
 </resources>

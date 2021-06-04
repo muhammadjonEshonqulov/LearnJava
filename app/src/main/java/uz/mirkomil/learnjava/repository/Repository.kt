@@ -32,8 +32,8 @@ class Repository private constructor(private val apiInterface: ApiInterface, con
     }
 
     // test
-    fun saveTest(data: Test) = myDao.saveTest(data)
-    fun getTest() = myDao.getTest()
+    fun saveTest(data: List<Test>) = myDao.saveTest(data)
+    fun getTest(subjectId: Int, lessonId: Int) = myDao.getTest(subjectId, lessonId)
     fun clearTest() = myDao.clearTest()
 
 

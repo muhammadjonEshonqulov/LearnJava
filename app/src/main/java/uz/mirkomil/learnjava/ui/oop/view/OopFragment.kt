@@ -23,7 +23,7 @@ class OopFragment : BaseFragment(R.layout.fragment_oop), OopView {
         presenter.saveLessons(getLessonData())
         binding.listOop.layoutManager = LinearLayoutManager(requireContext())
         binding.listOop.adapter = adapter
-        adapter.swapdata(getLessons())
+        adapter.swapdata(getLessonsForLesson())
         adapter.setOnclick {
             val bundleLesson = bundleOf("lesson_id" to it+1, "subject_id" to 2)
             startFragment(LessonFragment(), isAnimate = true,bundle = bundleLesson )
@@ -68,7 +68,6 @@ class OopFragment : BaseFragment(R.layout.fragment_oop), OopView {
         data.add(LessonData(29,2,10, "Javada interfeyslar ","Javada interfeyslar orqali to'liq abstraktsiyani tashkillashtirish mumkin. Interfeys tarkibidagi metodlarning faqat nomlari bo'lishi mumkin, ularning tanasi bo'lishi mumkin emas. Shuningdek, Interfeys tarkibida ma'lumotlar bo'lishi ham mumkin.\n" + "Esda tuting: Java kompilyatori interfeys tarkibidagi metodlarga public va abstractkalit so'zlarni, interfeys tarkibidagi ma'lumotlarga esa public, static va final kalit so'zlarni qo'shadi.\n" + "Interfeyslarni classlarda foydalanish uchun implements kalit so'zi ishlatiladi. Quyidagi misolda, printable interfeysi bitta print() metodiga ega va ushbu metodning tanasi A class ichida yozilayapti.\n" + "interface printable{\n" + "void print();\n" + "}\t\t\t\n" + "\n" + "class A implements printable{\n" + "public void print(){System.out.println(\"Salom\");}\n" + "\n" + "public static void main(String args[]){\n" + "A obj = new A();\n" + "obj.print();\n" + "}\n" + "}\n" + "Bir class bir vatda bir nechta interfeyslarndan foydalanishi (implementation) mumkin. Quyidagi misolga qarang:\n" + "interface Printable{  \n" + "void print();  \n" + "}  \n" + "  \n" + "interface Showable{  \n" + "void show();  \n" + "}  \n" + "  \n" + "class A implements Printable,Showable{  \n" + "  \n" + "public void print(){System.out.println(\"Salom\");}  \n" + "public void show(){System.out.println(\"Hush kelibsiz\");}  \n" + "  \n" + "public static void main(String args[]){  \n" + "A obj = new A();  \n" + "obj.print();  \n" + "obj.show();  \n" + " }  \n" + "}\n" + "Quyidagi misolda class interfeydan foydalanadi, interfeys esa boshqa interfeysdan nasl oladi:\n" + "interface Printable{  \n" + "void print();  \n" + "}  \n" + "interface Showable extends Printable{  \n" + "void show();  \n" + "}  \n" + "class A implements Showable{  \n" + "  \n" + "public void print(){System.out.println(\"Salom\");}  \n" + "public void show(){System.out.println(\"Hush kelibsiz\");}  \n" + "  \n" + "public static void main(String args[]){  \n" + "A obj = new A();  \n" + "obj.print();  \n" + "obj.show();  \n" + " }  \n" + "}\n" + "Shunindek, bir interfyes tarkibida boshqa bir interyes bo'lishi ham mumkin:\n" + "interface Xat{  \n" + " void xatKeldi();  \n" + " interface xatHabar{  \n" + "   void xatHabarKeldi();  \n" + " }  \n" + "}\n",R.drawable.o10_1 ))
 
         data.add(LessonData(30,2,11, "Javada collectionlar ","Javada to’plamlar(collection’lar) framework bo’lib, u o’zida obyektlarni saqlaydi.\n" + "To’plamlarda barcha jarayonlar (saralash, qidirish, yozish, o’chirish  va h.k lar)ni oson amalga oshirish  mumkin.\n" + "To’plamlar bir necha interface’lardan tashkil topgan. Ular (Set, List, Queue, Deque etc.) va klass’lar (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet va h.k).\n" + "To’plamlar obyektning alohida ko’rinishi.\n" + "To’plamlar frameworklar tuzilishi noma’lum bo’lgan obyekt guruhlarini o’zida yig’adi. To’plamlar ma’lumot yig’ishi bilan massivlarga o’xshab ketadi. Farqi massiv o’lchami statik To’plamlarniki esa dinamik, massiv bilan top’lamlarni qurilishi bir biridan tubdan faq qiladi va h.k.\n" + "To’plamlarning tuzilish sxemasi:\n",R.drawable.o11_1 ))
-        data.add(LessonData(31,2,11, "Javada collectionlar ","To’lamlar java.util paketida saqlanadi.\n" + "List\n" + "List dublikat(takrorlangan, aynan bir obyektni ikki marta qabul qilishi) elementlarni o’z ichiga olishi mumkin. Elementlar joylashtirilgan yoki ro’yxatda o’z holatiga ruxsat etilishi mumkin.\n" + "Listdan implement qiladigan klasslar\n" + "•\tArrayList\n" + "•\tLinkedList\n" + "•\tVektor\n" + "Set\n" + "Set ham To’plam, u o’zida dublikat elementlarni saqlamaydi. Set’dan asosiy 3 ta klass implement oladi ular: HashSet, TreeSet, va LinkedHashSet, HashSet elementlarni hashlab hash jadvaliga yig’adi. Treeset elementlarni daraxtsimon va saralangan holda saqlaydi saqlaydi.\n" + "Setdan implement qiladigan klasslar\n" + "•\tHashSet\n" + "•\tLinkedHashSet\n" + "•\tTreeSet\n" + "Map\n" + "Map key (kalit qiymati) ham value(kalitga mos qiymat)i ham obyekt bo’lgan collection’dir. U o’zida dublikat(takrorlangan) bo’lgan key’larni saqlamaydi. Map’dan 3 ta class implement oladi HashMap, TreeMap, va LinkedHashMap. HashMap : elementlarni hashlab yozadi, TreeMap : elementlarni qiymati(value) asosida saralab yozadi.\n" + "Mapdan implement oladigan klasslar\n" + "•\tHashMap\n" + "•\tTreeMap\n" + "•\tLinkedHashMap\n" + "Iterator/ListIterator\n" + "Iterator va ListIteratorlardan to’plamlarning elementlarini qaytarishda foydalaniladi\n" + "To’lamlarninig ba’zi funksiyalari  \n" + "N\tFunksiya nomlari\tTa’rifi\n" + "1\tpublic boolean add(Object element)\tTo’plamga ma’lumot yizishda foydalanilari\n" + "2\tpublic boolean addAll(Collection c)\tBelgilangan to’plarlarni yozishda ishlailadi\n" + "3\tpublic boolean remove(Object element)\tTo’plamni elementini o’chirishda ishlatiladi\n" + "4\tpublic boolean removeAll(Collection c)\tBelegilangan to’plarlarni o’chirishda ishlatiladi\n" + "5\tpublic boolean retainAll(Collection c)\t \n" + "6\tpublic int size()\tTo’plam elementlar sonini qaytaradi\n" + "7\tpublic void clear()\tTo’plamni elementlarini o’chiradi\n" + "8\tpublic boolean contains(Object element)\tElement qidirishda ishlatiladi\n" + "9\tpublic boolean containsAll(Collection c)\tBelgilangan to’plamlarni qidirishda ishlatiladi\n" + "10\tpublic Iterator iterator()\tIterator qaytaradi\n" + "11\tpublic Object[] toArray()\tTo’plamni massivga o’giradi\n" + "12\tpublic boolean isEmpty()\tTo’plamni bo’sh yokiy bo’sh emasligiga tekshiradi\n" + "13\tpublic boolean equals(Object element)\tIkkita to’plamni bir biri bilan solishtiradi\n" + "14\tpublic int hashCode()\tTo’plamni hash code dagi raqamini qaytaradi\n",null ))
 
         return data
     }
@@ -77,4 +76,20 @@ class OopFragment : BaseFragment(R.layout.fragment_oop), OopView {
         toast(s)
     }
 
+    fun getLessonsForLesson() : ArrayList<LessonData>{
+        val data  = ArrayList<LessonData>()
+        data.add(LessonData(0,0,0,"OOP HAQIDA MALUMOTLAR","",0))
+        data.add(LessonData(0,0,0,"Java sinfining atributlari","",0))
+        data.add(LessonData(0,0,0,"Javada constructor","",0))
+        data.add(LessonData(0,0,0,"Javada  Encapsulation","",0))
+        data.add(LessonData(0,0,0,"Java - Overriding","",0))
+        data.add(LessonData(0,0,0,"Javada Poliformism","",0))
+        data.add(LessonData(0,0,0,"Javada packet(packages)","",0))
+        data.add(LessonData(0,0,0,"Java - Abstraction","",0))
+        data.add(LessonData(0,0,0,"Java - Fayllar and I/O","",0))
+        data.add(LessonData(0,0,0,"Javada interfeyslar","",0))
+        data.add(LessonData(0,0,0,"Javada collectionlar","",0))
+
+        return data
+    }
 }
