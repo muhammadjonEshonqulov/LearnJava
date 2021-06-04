@@ -45,7 +45,20 @@
         android:textColor="@color/black"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/finish_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar_help"
+        android:layout_margin="16dp"
+        android:layout_toLeftOf="@+id/ic_time"
+        android:padding="5dp"
+        android:text="Testni yakunlash"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
     <ImageView
+        android:id="@+id/ic_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/action_bar_help"
@@ -64,12 +77,156 @@
         android:textColor="@color/black"
         android:textStyle="bold" />
 
-    <androidx.viewpager2.widget.ViewPager2
+    <ScrollView
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom_test"
-        android:layout_below="@id/test_pos" />
+        android:layout_below="@id/test_pos">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="What is it"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/answearA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/radio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/radio_btn_test1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/radio_button"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/test_answer_txt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@id/radio1"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:text="template_id:Strin" />
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E1E1E1" />
+
+                <RelativeLayout
+                    android:id="@+id/answearB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/radio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/radio_btn_test2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/radio_button"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/test_answer_txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@id/radio2"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:text="template_id:Strin" />
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E1E1E1" />
+
+                <RelativeLayout
+                    android:id="@+id/answearC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/radio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/radio_btn_test3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/radio_button"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/test_answer_txt3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@id/radio3"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:text="template_id:Strin" />
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E1E1E1" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/bottom_test"

@@ -14,5 +14,5 @@ data class Test(
     val answearB: String,
     val answearC: String,
     val connect: String,
-    var isCheckd: Boolean = false
+    var isCheckd: Int = 0
 )

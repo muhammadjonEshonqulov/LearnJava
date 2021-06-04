@@ -46,14 +46,14 @@ class LessonFragment : BaseFragment(R.layout.fragment_lesson), LessonView {
     fun getTestAll() : ArrayList<Test>{
         val data  = ArrayList<Test>()
         data.add(Test(1,1, 1, "jdk nima", "Java Runtime Environment ", "Java Development Kit (Java dashturlash uskunasi)", "dasturlash muhiti","2"))
-        data.add(Test(1,1, 2, "Jdk ni qaysi operatsion tizimlarga yuklasa buladi", "Android operatsion tizim ", "Linux OT", "hamma operatsion tizimlarga","3"))
-        data.add(Test(1,1, 3, "jdk qaysi faylda saqlanadi", "d:/program files/java/bin", "c:/program files/java/bin", "c. hech faylda sqalanmaydi,","2"))
+        data.add(Test(2,1, 1, "Jdk ni qaysi operatsion tizimlarga yuklasa buladi", "Android operatsion tizim ", "Linux OT", "hamma operatsion tizimlarga","3"))
+        data.add(Test(3,1, 1, "jdk qaysi faylda saqlanadi", "d:/program files/java/bin", "c:/program files/java/bin", "c. hech faylda sqalanmaydi,","2"))
 
-        data.add(Test(1,2, 1, "Netbeans nima", "dasturlash muhiti", "dasturlash tili", "komponenta","1"))
-        data.add(Test(1,2, 2, "Netbeans qachon ishlab chiqilgan", "1988", "1996","2000","2"))
-        data.add(Test(1,2, 3, "Netbeans qaysi dasturlash tillarini qullab quvatlaydi.", "python,html,css", "PHP,c,c++,java","java ,python","2"))
-        data.add(Test(1,2, 4, "Netbeans qaysi davlatda paydo bo’lgan", "Rossiya", " CHexiya","Aqsh","2"))
-        data.add(Test(1,2, 5, "U 90-yillarning oxirida qaysi korxona tomonidan sotib olingan ", "Sun Microsystems", "Apple","Amazon","1"))
+        data.add(Test(4,1, 2, "Netbeans nima", "dasturlash muhiti", "dasturlash tili", "komponenta","1"))
+        data.add(Test(5,1, 2, "Netbeans qachon ishlab chiqilgan", "1988", "1996","2000","2"))
+        data.add(Test(6,1, 2, "Netbeans qaysi dasturlash tillarini qullab quvatlaydi.", "python,html,css", "PHP,c,c++,java","java ,python","2"))
+        data.add(Test(7,1, 2, "Netbeans qaysi davlatda paydo bo’lgan", "Rossiya", " CHexiya","Aqsh","2"))
+        data.add(Test(8,1, 2, "U 90-yillarning oxirida qaysi korxona tomonidan sotib olingan ", "Sun Microsystems", "Apple","Amazon","1"))
 
 //        data.add(Test(1,2, 5, "", "", "","","2"))
 
