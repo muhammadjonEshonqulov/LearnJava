@@ -13,6 +13,6 @@ data class Test(
     val answearA: String,
     val answearB: String,
     val answearC: String,
-    val connect: String,
+    val correct: String,
     var isCheckd: Int = 0
 )

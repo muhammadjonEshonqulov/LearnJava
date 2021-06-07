@@ -10,9 +10,9 @@ import uz.mirkomil.learnjava.model.LessonData
 class BeginnerAdapter : SingleTypeAdapter<LessonData>(R.layout.item_beginner, ArrayList()) {
 
     lateinit var binding: ItemBeginnerBinding
-    var listener: ((Int) -> Unit)? = null
+    var listener: ((Int, String) -> Unit)? = null
 
-    fun setOnclick(listener: ((Int) -> Unit)?){
+    fun setOnclick(listener: ((Int, String) -> Unit)?){
         this.listener = listener
     }
 
@@ -23,7 +23,7 @@ class BeginnerAdapter : SingleTypeAdapter<LessonData>(R.layout.item_beginner, Ar
         binding.itemName.text = ""+(position+1)+"-Dars. " + data[position].tittle
 
         binding.itemBack.setOnClickListener {
-            listener?.invoke(position)
+            listener?.invoke(position, data[position].tittle    )
         }
     }
 }

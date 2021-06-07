@@ -69,4 +69,6 @@ Bu adresda JDKning barcha bajariluvchi fayllari joylashgan. Biz ularni, operatsi
     <string name="historyjavatext9">Shundan so\'ng, «Значение переменной«dagi qiymatlarning oxiriga o\'tamiz va » C:\Program Files\Java\jdk*\bin» adresini kiritamiz(* o\'rniga o\'zingizning jdk adresingiz bo\'ladi, ya\'ni mavjud papka nomi). «OK» tugmalarini bosib, bu oynalardan chiqib ketamiz va kompyuterni qayta yuklaymiz.
 Hozircha shu, xulosa qiladigan bo\'lsak, biz bu maqolada, o\'zida Java kompilyatorni saqlaydigan, qaysiki biz yozgan Java kodlarni bayt kodga(kompyuter tushunadigan kodga) o\'tkazib beradigan, undan tashqari yozilgan kodlarni ishlatish uchun kerak bo\'ladigan Java-mashinani ham o\'zida mujassam etgan JDK(Java Development Kit)ni yuklashni, o\'rnatishni va operatsion tizimga o\'rnatilgan joyini e\'lon qilishni ko\'rib chiqdik.
 </string>
+    <string name="link1"><a href="https://www.tutorialspoint.com/java/java_numbers.htm">https://www.tutorialspoint.com/java/java_numbers.htm</a></string>
+    <string name="link2"><a href="https://obuchalka.org › java-effektivnoe-programmirov">https://obuchalka.org › java-effektivnoe-programmirov</a></string>
 </resources>

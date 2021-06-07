@@ -20,12 +20,12 @@ class OopFragment : BaseFragment(R.layout.fragment_oop), OopView {
         binding = FragmentOopBinding.bind(view)
         adapter = OopAdapter()
         presenter  = OopPresenter(this, Repository.getRepositoryWithApiClient(requireContext()))
-        presenter.saveLessons(getLessonData())
+        presenter.saveLessons(getLessonsForLesson())
         binding.listOop.layoutManager = LinearLayoutManager(requireContext())
         binding.listOop.adapter = adapter
         adapter.swapdata(getLessonsForLesson())
-        adapter.setOnclick {
-            val bundleLesson = bundleOf("lesson_id" to it+1, "subject_id" to 2)
+        adapter.setOnclick {index, title ->
+            val bundleLesson = bundleOf("lesson_id" to index+1, "subject_id" to 2, "title" to title)
             startFragment(LessonFragment(), isAnimate = true,bundle = bundleLesson )
         }
         binding.backBtnHelp.setOnClickListener {

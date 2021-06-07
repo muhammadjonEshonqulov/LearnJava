@@ -28,8 +28,8 @@ class BeginnerFragment : BaseFragment(R.layout.fragment_beginner), BeginnerView 
         binding.beginnerLessons.adapter = adapter
 
         adapter.swapdata(getLessonsForLesson())
-        adapter.setOnclick {
-            val bundleLesson = bundleOf("lesson_id" to it+1, "subject_id" to 1)
+        adapter.setOnclick { index, title ->
+            val bundleLesson = bundleOf("lesson_id" to index+1, "subject_id" to 1, "title" to title)
             startFragment(LessonFragment(), isAnimate = true,bundle = bundleLesson )
         }
         binding.backBtnHelp.setOnClickListener {

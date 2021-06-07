@@ -30,7 +30,9 @@ class MaruzaFragment : BaseFragment(R.layout.fragment_maruza), MaruzaView {
 
             }
         }
-
+        arguments?.getString("title")?.let {
+            binding.titleHelp.text = it
+        }
         binding.backBtnHelp.setOnClickListener {
             finish()
         }
