@@ -20,7 +20,7 @@ class OopFragment : BaseFragment(R.layout.fragment_oop), OopView {
         binding = FragmentOopBinding.bind(view)
         adapter = OopAdapter()
         presenter  = OopPresenter(this, Repository.getRepositoryWithApiClient(requireContext()))
-        presenter.saveLessons(getLessonsForLesson())
+        presenter.saveLessons(getLessonData())
         binding.listOop.layoutManager = LinearLayoutManager(requireContext())
         binding.listOop.adapter = adapter
         adapter.swapdata(getLessonsForLesson())
